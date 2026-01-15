@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.replit
+.local
+.config/replit
+.upm
+.nix
+*.log
+.DS_Store

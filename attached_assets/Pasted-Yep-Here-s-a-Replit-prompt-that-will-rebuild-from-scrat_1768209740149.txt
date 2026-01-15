@@ -1,0 +1,104 @@
+Yep. Here’s a Replit prompt that will rebuild from scratch (no repo drama), using phnompenhopera.com as the reference vibe, and output something you can deploy.
+
+Copy/paste this into Replit (Agent / AI chat):
+
+⸻
+
+Replit prompt (full rebuild)
+
+Build a bilingual festival website from scratch for Phnom Penh Opera, inspired by https://www.phnompenhopera.com/ but cleaner and more premium.
+
+Stack
+	•	Next.js (App Router) + TypeScript
+	•	Tailwind CSS
+	•	Static/SSG-friendly (avoid server-only features unless necessary)
+
+Routing + locales
+
+Support locales en and km using URL prefix routes:
+	•	/en and /km (Home)
+	•	/en/programme and /km/programme
+	•	/en/programme/don-giovanni and /km/programme/don-giovanni
+	•	/en/the-festival and /km/the-festival
+	•	/en/sustainability and /km/sustainability
+	•	/en/cast and /km/cast
+	•	/en/sponsors and /km/sponsors
+	•	/en/contact and /km/contact
+	•	/en/terms-of-service and /km/terms-of-service
+
+Root / should redirect to /en (or a language chooser—pick one and implement cleanly).
+
+Layout requirements
+
+Create a shared layout with:
+Header
+	•	Brand text: EN “Phnom Penh Opera”, KM “អូប៉េរ៉ា ភ្នំពេញ”
+	•	Nav links: Home, Programme, The Festival, Sustainability, Contact
+	•	Primary “Tickets” button linking to https://ppoi-front.vercel.app/
+	•	Locale toggle (EN/KM) that preserves current path (e.g. /en/programme -> /km/programme)
+
+Footer
+	•	Festival name
+	•	info@phnompenhopera.com
+	•	+855 12 636 939
+	•	Terms link /[locale]/terms-of-service
+
+Page content (must be showable, not blank)
+
+Home:
+	•	Hero title + tagline + short quote/mission sentence
+	•	Dates + venue section (placeholders ok)
+	•	CTA row: Tickets + View programme
+	•	“What’s on this site” (4 bullets)
+	•	“Next updates” (coming soon)
+
+Programme:
+	•	Intro + list of programme items
+	•	Prominent link to Don Giovanni page
+
+Don Giovanni:
+	•	Overview, dates/venue placeholders, cast placeholders, Tickets CTA
+
+The Festival:
+	•	About / mission / story sections
+
+Sustainability:
+	•	Intro + 4–6 bullet commitments
+
+Cast:
+	•	Simple cast list layout (TBC ok)
+
+Sponsors:
+	•	Sponsor tiers (Gold/Silver/Bronze) + partnership enquiry callout
+
+Contact:
+	•	Contact info + simple form (name/email/message) that doesn’t require a backend (front-end only)
+
+Terms of Service:
+	•	Structured placeholder terms (headings + bullets)
+
+Design direction
+	•	Premium arts festival vibe:
+	•	warm cream background
+	•	deep red primary
+	•	gold accent
+	•	elegant serif headings + clean sans body
+	•	Consistent rounded cards, subtle borders, good spacing, mobile-first.
+
+Deliverables
+	1.	Working app with all routes above in EN + KM.
+	2.	No 404s for listed pages.
+	3.	Locale switch preserves path.
+	4.	npm run build must pass.
+	5.	Provide run instructions and any env vars (ideally none).
+
+Proceed by:
+	1.	scaffold project
+	2.	create locale routing + layout
+	3.	implement pages + translated copy object
+	4.	style polish
+	5.	verify build
+
+⸻
+
+If you want the strongest Replit result: after it scaffolds, tell it “show me the file tree and the exact commands you ran” so you can sanity-check quickly.

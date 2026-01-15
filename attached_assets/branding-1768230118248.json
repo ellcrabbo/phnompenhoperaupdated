@@ -1,0 +1,98 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "iowanoldst-bt-hd2qcf",
+      "count": 64
+    },
+    {
+      "family": "iowanoldst-blk-bt-ts1xa5",
+      "count": 4
+    },
+    {
+      "family": "sans-serif",
+      "count": 3
+    },
+    {
+      "family": "Almarai",
+      "count": 1
+    }
+  ],
+  "colors": {
+    "primary": "#E7BDBD",
+    "accent": "#730606",
+    "background": "#FFFFFF",
+    "textPrimary": "#730606",
+    "link": "#730606"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "sans-serif",
+      "heading": "iowanoldst-bt-hd2qcf"
+    },
+    "fontStacks": {
+      "body": [
+        "sans-serif"
+      ],
+      "heading": [
+        "iowanoldst-bt-hd2qcf"
+      ],
+      "paragraph": [
+        "iowanoldst-bt-hd2qcf"
+      ]
+    },
+    "fontSizes": {
+      "h1": "85.12px",
+      "h2": "57.472px",
+      "body": "32.5px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "0px"
+  },
+  "components": {
+    "input": {
+      "background": "#FFFFFF",
+      "textColor": "#000000",
+      "borderColor": "#650505",
+      "borderRadius": "0px",
+      "borderRadiusCorners": {
+        "topLeft": "0px",
+        "topRight": "0px",
+        "bottomRight": "0px",
+        "bottomLeft": "0px"
+      },
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "File saved at: attached_assets/logo.webp",
+    "favicon": "File saved at: attached_assets/favicon.webp",
+    "ogImage": "http://static1.squarespace.com/static/690c0b0878c83b5be15a45c7/t/69479dd10860ba1336ad63e5/1766301137557/3png-01.png?format=1500w"
+  },
+  "__framework_hints": [],
+  "__llm_logo_reasoning": {
+    "selectedIndex": 1,
+    "reasoning": "Strong indicators: variant bonus (+8), header logo linking to homepage, header location, visible, class contains logo, alt exactly matches brand name \"Phnom Penh International Opera Festival\", reasonable size. Score: 123 (clear winner by 68 points)",
+    "confidence": 0.9
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": -1,
+      "text": "N/A",
+      "reasoning": "LLM failed"
+    },
+    "secondary": {
+      "index": -1,
+      "text": "N/A",
+      "reasoning": "LLM failed"
+    },
+    "confidence": 0
+  },
+  "confidence": {
+    "buttons": 0,
+    "colors": 0,
+    "overall": 0
+  }
+}
