@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useLocation, Redirect } from 'wouter';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { queryClient } from './lib/queryClient';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { Analytics } from '@vercel/analytics/react';
