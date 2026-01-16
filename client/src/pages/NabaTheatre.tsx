@@ -2,11 +2,14 @@ import { Link } from 'wouter';
 import { ArrowLeft, Users, Star, Phone, Mail, Sparkles, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLocale } from '@/lib/locale-context';
+import nabaInterior from '@/assets/IMG_3998.jpg';
+import nabaStage from '@/assets/IMG_3588.jpg';
+
 
 const IMAGES = {
   nabaExterior: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/3a21c430-de2d-4389-afb4-a56c972a863f/NABA+Theatre+2.jpg',
-  nabaInterior: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1920&q=80',
-  nabaStage: 'https://images.unsplash.com/photo-1503095396549-807759245b35?w=1200&q=80',
+  nabaInterior,
+  nabaStage,
 };
 
 function GoldDivider() {
