@@ -1,0 +1,19 @@
+{
+  "name": "Phnom Penh International Opera Festival",
+  "short_name": "PPIOF",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#e6a3b4",
+  "background_color": "#000000",
+  "display": "standalone"
+}
