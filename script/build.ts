@@ -36,7 +36,15 @@ async function buildAll() {
   await rm("dist", { recursive: true, force: true });
 
   console.log("building client...");
-  await viteBuild();
+  await viteBuild({
+    // Vite needs to run with the client/ directory as its root so it can find client/index.html
+    root: "client",
+    build: {
+      // Emit the static site into dist/public for Vercel static hosting
+      outDir: "../dist/public",
+      emptyOutDir: false,
+    },
+  });
 
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
