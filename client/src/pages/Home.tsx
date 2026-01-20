@@ -44,7 +44,7 @@ export default function Home() {
             className="font-display uppercase tracking-[0.25em] text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground mb-8"
             style={{ lineHeight: '1.1' }}
           >
-            {locale === 'en' ? 'Phnom Penh Opera' : 'អូប៉េរ៉ាភ្នំពេញ'}
+            {locale === 'en' ? 'Phnom Penh International Opera Festival' : 'អូប៉េរ៉ាភ្នំពេញ'}
           </h1>
           <div className="w-16 h-px bg-primary/60 mx-auto mb-8" />
           <p className="font-serif italic text-lg md:text-xl lg:text-2xl text-foreground/80 max-w-3xl mx-auto leading-relaxed mb-8">
