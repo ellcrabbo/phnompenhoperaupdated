@@ -98,7 +98,7 @@ export default function Festival() {
               <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
                 <p>
                   {locale === 'en'
-                    ? 'Phnom Penh Opera is Cambodia\'s premier international opera festival, bringing world-class performances to the heart of Southeast Asia. Founded with the vision of making opera accessible to new audiences, we celebrate the universal language of music and storytelling.'
+                    ? 'Phnom Penh International Opera Festival is Cambodia\'s premier international opera festival, bringing world-class performances to the heart of Southeast Asia. Founded with the vision of making opera accessible to new audiences, we celebrate the universal language of music and storytelling.'
                     : 'អូប៉េរ៉ាភ្នំពេញគឺជាមហោស្រពអូប៉េរ៉ាអន្តរជាតិដ៏ល្បីល្បាញរបស់កម្ពុជា ដែលនាំមកនូវការសម្តែងកម្រិតពិភពលោកមកកាន់បេះដូងអាស៊ីអាគ្នេយ៍។'}
                 </p>
                 <p>
