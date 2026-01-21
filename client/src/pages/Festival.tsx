@@ -57,16 +57,12 @@ export default function Festival() {
               ? 'Where world-class opera meets the heart of Southeast Asia'
               : 'កន្លែងដែលអូប៉េរ៉ាកម្រិតពិភពលោកជួបបេះដូងអាស៊ីអាគ្នេយ៍'}
           </p>
-          <a 
-            href="https://ppoi-front.vercel.app" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
+          <Link href={`/${locale}/waitlist`}>
             <Button size="lg" data-testid="button-book-now">
               <Ticket className="mr-2 h-5 w-5" />
-              {locale === 'en' ? 'Book Now' : 'កក់ឥឡូវនេះ'}
+              {locale === 'en' ? 'Join the Waitlist' : 'កក់ឥឡូវនេះ'}
             </Button>
-          </a>
+          </Link>
         </div>
       </section>
 
