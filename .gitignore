@@ -8,3 +8,4 @@ dist
 .nix
 *.log
 .DS_Store
+waitlist.csv
