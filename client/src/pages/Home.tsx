@@ -31,7 +31,7 @@ export default function Home() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('${IMAGES.donGiovanniPoster}')` }}
+          style={{ backgroundImage: `url('${IMAGES.nabaTheatre}')` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
@@ -85,15 +85,15 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-4 mb-10">
             <div className="aspect-[4/5] rounded-lg overflow-hidden">
               <img 
-                src={EB1D7DA6_B44D_4390_80BD_8EC81420E53F_1_201_a} 
-                alt="Don Giovanni Performance"
+                src={entertainment} 
+                alt="NABA Theatre"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="aspect-[4/5] rounded-lg overflow-hidden">
               <img 
-                src={entertainment} 
-                alt="NABA Theatre"
+                src={EB1D7DA6_B44D_4390_80BD_8EC81420E53F_1_201_a} 
+                alt="Don Giovanni Performance"
                 className="w-full h-full object-cover"
               />
             </div>
