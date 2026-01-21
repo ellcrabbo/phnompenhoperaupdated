@@ -2,7 +2,7 @@ export type Locale = 'en' | 'km';
 
 export const translations = {
   en: {
-    brand: 'Phnom Penh Opera',
+    brand: 'Phnom Penh International Opera Festival',
     nav: {
       home: 'Home',
       programme: 'Programme',
@@ -15,7 +15,7 @@ export const translations = {
       tickets: 'Tickets',
     },
     home: {
-      heroTitle: 'Phnom Penh Opera',
+      heroTitle: 'Phnom Penh International Opera Festival',
       heroSubtitle: 'International Opera Festival 2026',
       heroQuote: '"Where East meets West in a celebration of operatic excellence"',
       dates: 'March 15-28, 2026',
@@ -51,7 +51,7 @@ export const translations = {
       title: 'Don Giovanni',
       subtitle: 'Opera in Two Acts by Wolfgang Amadeus Mozart',
       overview: 'A Landmark Achievement',
-      overviewText: "In December 2025, Phnom Penh Opera presented Mozart's Don Giovanni at the historic Naba Theatre - marking a milestone as one of Cambodia's first fully-staged international opera productions. This groundbreaking event brought together international artists and local talent, introducing Cambodian audiences to the power and beauty of live opera.",
+      overviewText: "In December 2025, Phnom Penh International Opera Festival presented Mozart's Don Giovanni at the historic Naba Theatre - marking a milestone as one of Cambodia's first fully-staged international opera productions. This groundbreaking event brought together international artists and local talent, introducing Cambodian audiences to the power and beauty of live opera.",
       datesVenue: 'Dates & Venue',
       performances: 'December 12 & 14, 2025',
       venueText: 'Naba Theatre, Phnom Penh',
@@ -62,18 +62,18 @@ export const translations = {
     },
     festival: {
       title: 'The Festival',
-      aboutTitle: 'About Phnom Penh Opera',
-      aboutText: "Phnom Penh Opera is Cambodia's premier international opera festival, bringing world-class performances to the heart of Southeast Asia. Founded with the vision of making opera accessible to new audiences, we celebrate the universal language of music and storytelling.",
+      aboutTitle: 'About Phnom Penh International Opera Festival',
+      aboutText: "Phnom Penh International Opera Festival is Cambodia's premier international opera festival, bringing world-class performances to the heart of Southeast Asia. Founded with the vision of making opera accessible to new audiences, we celebrate the universal language of music and storytelling.",
       missionTitle: 'Our Mission',
       missionText: 'To inspire, educate, and connect communities through the transformative power of opera and classical music, while fostering cultural exchange between Cambodia and the international arts community.',
       storyTitle: 'Our Story',
-      storyText: 'Born from a passion for opera and a love for Cambodia, Phnom Penh Opera began as a dream to bring the magic of live opera to Phnom Penh. What started as intimate concerts has grown into a full-scale festival featuring international artists, educational programs, and community outreach initiatives.',
+      storyText: 'Born from a passion for opera and a love for Cambodia, Phnom Penh International Opera Festival began as a dream to bring the magic of live opera to Phnom Penh. What started as intimate concerts has grown into a full-scale festival featuring international artists, educational programs, and community outreach initiatives.',
       visionTitle: 'Looking Forward',
       visionText: 'As we continue to grow, our commitment remains unchanged: to present exceptional opera in Cambodia while nurturing the next generation of artists and audiences.',
     },
     sustainability: {
       title: 'Sustainability',
-      intro: 'Phnom Penh Opera is committed to environmental responsibility and sustainable practices in all aspects of our festival operations.',
+      intro: 'Phnom Penh International Opera Festival is committed to environmental responsibility and sustainable practices in all aspects of our festival operations.',
       commitments: 'Our Commitments',
       items: [
         { title: 'Eco-Conscious Events', desc: 'We minimize environmental impact and offset emissions from our productions and events.' },
@@ -96,7 +96,7 @@ export const translations = {
     },
     sponsors: {
       title: 'Our Sponsors',
-      intro: 'Phnom Penh Opera is made possible through the generous support of our sponsors and partners.',
+      intro: 'Phnom Penh International Opera Festival is made possible through the generous support of our sponsors and partners.',
       tiers: {
         gold: 'Gold Sponsors',
         silver: 'Silver Sponsors',
@@ -131,11 +131,11 @@ export const translations = {
       sections: [
         {
           title: '1. Acceptance of Terms',
-          content: 'By accessing and using the Phnom Penh Opera website and services, you agree to be bound by these Terms of Service.',
+          content: 'By accessing and using the Phnom Penh International Opera Festival website and services, you agree to be bound by these Terms of Service.',
         },
         {
           title: '2. Ticket Purchases',
-          content: 'All ticket sales are final. Refunds may be available in case of event cancellation at the discretion of Phnom Penh Opera.',
+          content: 'All ticket sales are final. Refunds may be available in case of event cancellation at the discretion of Phnom Penh International Opera Festival.',
         },
         {
           title: '3. Event Policies',
@@ -151,7 +151,7 @@ export const translations = {
         },
         {
           title: '5. Intellectual Property',
-          content: 'All content on this website is the property of Phnom Penh Opera and may not be reproduced without permission.',
+          content: 'All content on this website is the property of Phnom Penh International Opera Festival and may not be reproduced without permission.',
         },
         {
           title: '6. Contact',
@@ -160,7 +160,7 @@ export const translations = {
       ],
     },
     footer: {
-      copyright: '© 2026 Phnom Penh Opera. All rights reserved.',
+      copyright: '© 2026 Phnom Penh International Opera Festival. All rights reserved.',
       terms: 'Terms of Service',
     },
   },
