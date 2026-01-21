@@ -42,6 +42,7 @@ async function buildAll() {
     build: {
       // Emit the static site into dist/public for Vercel static hosting
       outDir: "../dist/public",
+      cssCodeSplit: false,
       emptyOutDir: false,
     },
   });
