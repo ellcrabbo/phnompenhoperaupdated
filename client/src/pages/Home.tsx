@@ -31,7 +31,7 @@ export default function Home() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('${IMAGES.nabaTheatre}')` }}
+          style={{ backgroundImage: `url('${IMAGES.donGiovanniPoster}')` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
@@ -50,10 +50,13 @@ export default function Home() {
           <p className="font-serif italic text-lg md:text-xl lg:text-2xl text-foreground/80 max-w-3xl mx-auto leading-relaxed mb-8">
             {t.home.heroQuote}
           </p>
+          <p className="text-sm md:text-base text-foreground/70 max-w-2xl mx-auto mb-10">
+            {locale === 'en' ? 'Next up: La Bohème — register now to be the first to hear when tickets are released.' : 'បន្ទាប់មក៖ La Bohème — ចុះឈ្មោះឥឡូវនេះ ដើម្បីទទួលដំណឹងពេលសំបុត្រចេញលក់។'}
+          </p>
           <Link href={`/${locale}/waitlist`}>
             <Button size="lg" data-testid="button-book-now">
               <Ticket className="mr-2 h-5 w-5" />
-              {locale === 'en' ? 'Join the Waitlist' : 'កក់ឥឡូវនេះ'}
+              {locale === 'en' ? 'Join the Waitlist' : 'ចុះឈ្មោះរង់ចាំសំបុត្រ'}
             </Button>
           </Link>
         </div>
