@@ -26,9 +26,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   await ensureWaitlistTable();
 
-  const { rows } = await pool.query(
-    `SELECT email, created_at FROM waitlist ORDER BY created_at DESC;`
-  );
+  const { rows } = await pool.query(`SELECT email, created_at FROM waitlist ORDER BY created_at DESC;`);
 
   const header = "email,created_at\n";
   const lines = rows
