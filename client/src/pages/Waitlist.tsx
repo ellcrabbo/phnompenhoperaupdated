@@ -32,7 +32,7 @@ export default function Waitlist() {
 
    return (
     <div className="mx-auto w-full max-w-3xl px-6 py-16 md:py-24">
-      <div className="rounded-2xl border border-white/10 bg-black/20 p-6 md:p-10">
+      <div className="rounded-2xl border border-white/10 bg-black/20 p-6 md:p-10 text-center">
         <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
           {locale === 'en' ? 'Join the Waitlist' : 'ចុះឈ្មោះរង់ចាំសំបុត្រ'}
         </h1>
@@ -50,7 +50,10 @@ export default function Waitlist() {
               : 'បានចុះឈ្មោះរួចរាល់។ យើងនឹងផ្ញើអ៊ីមែលពេលសំបុត្រចេញលក់។'}
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <form
+              onSubmit={handleSubmit}
+              className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center"
+            >
             <input
               type="email"
               value={email}
