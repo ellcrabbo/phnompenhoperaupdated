@@ -20,6 +20,13 @@ import Sponsors from '@/pages/Sponsors';
 import Contact from '@/pages/Contact';
 import Terms from '@/pages/Terms';
 import NotFound from '@/pages/not-found';
+import Waitlist from '@/pages/Waitlist';
+
+const VALID_LOCALES: Locale[] = ['en', 'km'];
+
+function isValidLocale(value: string): value is Locale {
+  return VALID_LOCALES.includes(value as Locale);
+}
 
 function LocaleRouter({ locale }: { locale: Locale }) {
   return (
@@ -32,6 +39,7 @@ function LocaleRouter({ locale }: { locale: Locale }) {
       <Route path={`/${locale}/cast`} component={Cast} />
       <Route path={`/${locale}/sponsors`} component={Sponsors} />
       <Route path={`/${locale}/contact`} component={Contact} />
+      <Route path={`/${locale}/waitlist`} component={Waitlist} />
       <Route path={`/${locale}/terms-of-service`} component={Terms} />
       <Route component={NotFound} />
     </Switch>
@@ -40,33 +48,25 @@ function LocaleRouter({ locale }: { locale: Locale }) {
 
 function Router() {
   const [location] = useLocation();
-  const [locale, setLocale] = useState<Locale>('en');
-
-  useEffect(() => {
-    const pathLocale = location.split('/')[1] as Locale;
-    if (pathLocale === 'en' || pathLocale === 'km') {
-      setLocale(pathLocale);
-    }
-  }, [location]);
 
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  if (location === '/') {
-    return <Redirect to="/en" />;
-  }
-
   const pathLocale = location.split('/')[1];
-  if (pathLocale !== 'en' && pathLocale !== 'km') {
+  const isValidPath = isValidLocale(pathLocale);
+
+  if (location === '/' || !isValidPath) {
     return <Redirect to="/en" />;
   }
 
   return (
-    <LocaleProvider locale={locale} onLocaleChange={setLocale}>
+    <LocaleProvider locale={pathLocale} onLocaleChange={(newLocale) => {
+      // Navigation handled by Link components, locale follows URL
+    }}>
       <Layout>
-        <LocaleRouter locale={locale} />
+        <LocaleRouter locale={pathLocale} />
       </Layout>
     </LocaleProvider>
   );

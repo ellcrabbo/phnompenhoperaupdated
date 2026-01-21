@@ -50,16 +50,12 @@ export default function Home() {
           <p className="font-serif italic text-lg md:text-xl lg:text-2xl text-foreground/80 max-w-3xl mx-auto leading-relaxed mb-8">
             {t.home.heroQuote}
           </p>
-          <a 
-            href="https://ppoi-front.vercel.app" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
+          <Link href={`/${locale}/waitlist`}>
             <Button size="lg" data-testid="button-book-now">
               <Ticket className="mr-2 h-5 w-5" />
-              {locale === 'en' ? 'Book Now' : 'កក់ឥឡូវនេះ'}
+              {locale === 'en' ? 'Join the Waitlist' : 'កក់ឥឡូវនេះ'}
             </Button>
-          </a>
+          </Link>
         </div>
       </section>
       <section
