@@ -303,6 +303,24 @@ export default function Festival() {
             </div>
           </div>
         </div>
+
+      </section>
+       <section className="relative bg-background py-16 md:py-24" data-testid="section-looking-ahead">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <p className="text-primary/80 tracking-[0.3em] text-xs uppercase mb-4">
+              {locale === 'en' ? 'Looking Ahead' : 'មើលទៅអនាគត'}
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
+              La Traviata
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+              {locale === 'en'
+                ? "Verdi’s iconic story of love, sacrifice, and society is in development as a future production of the Phnom Penh International Opera Festival."
+                : "រឿងដ៏ល្បីរបស់ Verdi អំពីសេចក្តីស្រឡាញ់ ការលះបង់ និងសង្គម កំពុងស្ថិតក្នុងការរៀបចំសម្រាប់ការផលិតនៅអនាគតរបស់ Phnom Penh International Opera Festival។"}
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className="py-14 md:py-20 bg-background">
@@ -322,23 +340,6 @@ export default function Festival() {
         </div>
       </section>
 
-      <section className="relative bg-background py-16 md:py-24" data-testid="section-looking-ahead">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <p className="text-primary/80 tracking-[0.3em] text-xs uppercase mb-4">
-              {locale === 'en' ? 'Looking Ahead' : 'មើលទៅអនាគត'}
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
-              La Traviata
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-              {locale === 'en'
-                ? "Verdi’s iconic story of love, sacrifice, and society is in development as a future production of the Phnom Penh International Opera Festival."
-                : "រឿងដ៏ល្បីរបស់ Verdi អំពីសេចក្តីស្រឡាញ់ ការលះបង់ និងសង្គម កំពុងស្ថិតក្នុងការរៀបចំសម្រាប់ការផលិតនៅអនាគតរបស់ Phnom Penh International Opera Festival។"}
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
