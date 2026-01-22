@@ -106,18 +106,21 @@ export default function DonGiovanni() {
       quote: locale === 'en' 
         ? 'The Opera of the Future: Don Giovanni places Phnom Penh on the map of major cultural capitals.'
         : 'អូប៉េរ៉ានៃអនាគត៖ Don Giovanni ដាក់ភ្នំពេញលើផែនទីនៃរដ្ឋធានីវប្បធម៌ធំៗ។',
+      url: 'https://www.cambodgemag.com/en/post/the-opera-of-the-future-don-giovanni-illuminates-phnom-penh-with-brilliance-and-conscience',
     },
     {
       source: 'Cambodia Investment Review',
       quote: locale === 'en'
         ? 'World-first carbon-neutral opera festival through multi-year NagaWorld partnership.'
         : 'ពិធីបុណ្យអូប៉េរ៉ាគ្មានកាបូនដំបូងបង្អស់របស់ពិភពលោក។',
+      url: 'https://cambodiainvestmentreview.com/2025/11/25/cambodia-to-host-world-first-carbon-neutral-opera-festival-through-multi-year-nagaworld-partnership/',
     },
     {
       source: 'Cambodianess',
       quote: locale === 'en'
         ? 'Opera Festival launches green production with renewable energy and sustainable practices.'
         : 'ពិធីបុណ្យអូប៉េរ៉ាចាប់ផ្តើមការផលិតបៃតងជាមួយថាមពលកកើតឡើងវិញ។',
+      url: 'https://cambodianess.com/article/opera-festival-launches-green-production',
     },
   ];
 
@@ -261,9 +264,13 @@ export default function DonGiovanni() {
           
           <div className="grid md:grid-cols-3 gap-6">
             {pressQuotes.map((item, index) => (
-              <div 
+              <a
                 key={index}
-                className="p-6 bg-card rounded-lg border border-border/50"
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${item.source} article`}
+                className="p-6 bg-card rounded-lg border border-border/50 hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-primary/40 transition"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-primary/10 rounded-lg">
@@ -272,7 +279,7 @@ export default function DonGiovanni() {
                   <p className="font-medium text-foreground">{item.source}</p>
                 </div>
                 <p className="text-muted-foreground italic leading-relaxed">"{item.quote}"</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
