@@ -294,11 +294,11 @@ export default function Festival() {
               </p>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 {locale === 'en' 
-                  ? "In bohemian Paris, four young artists chase beauty, love, and meaning — until reality arrives at the door."
+                  ? "In bohemian Paris, four artists chase beauty, love, and meaning - until reality arrives at the door."
                   : "នៅប៉ារីសបែប bohemian សិល្បករវ័យក្មេងបួននាក់ស្វែងរកស្នេហា និងសោភ័ណភាព ខណៈជីវិតពិតចាប់ផ្តើមគោះទ្វារ។"}
               </p>
               <p className="text-foreground/60 text-sm font-medium">
-                {locale === 'en' ? 'Season 2026' : 'រដូវកាល ២០២៦'}
+                {locale === 'en' ? 'November 2026' : 'វិច្ឆិកា ២០២៦'}
               </p>
             </div>
           </div>
