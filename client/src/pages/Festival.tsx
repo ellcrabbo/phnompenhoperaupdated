@@ -305,20 +305,72 @@ export default function Festival() {
         </div>
 
       </section>
-       <section className="relative bg-background py-16 md:py-24" data-testid="section-looking-ahead">
+      <section className="relative bg-card/50 py-16 md:py-24" data-testid="section-looking-ahead">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <p className="text-primary/80 tracking-[0.3em] text-xs uppercase mb-4">
-              {locale === 'en' ? 'Looking Ahead' : 'មើលទៅអនាគត'}
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
-              La Traviata
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-              {locale === 'en'
-                ? "Verdi’s iconic story of love, sacrifice, and society is in development as a future production of the Phnom Penh International Opera Festival."
-                : "រឿងដ៏ល្បីរបស់ Verdi អំពីសេចក្តីស្រឡាញ់ ការលះបង់ និងសង្គម កំពុងស្ថិតក្នុងការរៀបចំសម្រាប់ការផលិតនៅអនាគតរបស់ Phnom Penh International Opera Festival។"}
-            </p>
+          <div className="mx-auto max-w-5xl rounded-2xl border border-white/10 bg-black/20 p-8 md:p-12">
+            <div className="text-center">
+              <p className="text-gold tracking-[0.3em] text-[10px] uppercase mb-4 font-medium">
+                {locale === 'en' ? 'Looking Ahead' : 'មើលទៅអនាគត'}
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4">
+                La Traviata
+              </h2>
+              <p className="text-muted-foreground text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+                {locale === 'en'
+                  ? "Verdi’s iconic opera follows Violetta — a woman caught between love and a society that refuses to let her choose her own fate. La Traviata is in development as a future production of the Phnom Penh International Opera Festival."
+                  : "អូប៉េរ៉ាដ៏ល្បីរបស់ Verdi ប្រាប់រឿង Violetta — ស្ត្រីម្នាក់ដែលជាប់ចន្លោះស្នេហា និងសង្គមដែលមិនអនុញ្ញាតឲ្យនាងជ្រើសរើសវាសនារបស់ខ្លួន។ La Traviata កំពុងស្ថិតក្នុងការរៀបចំសម្រាប់ការផលិតនៅអនាគតរបស់ Phnom Penh International Opera Festival។"}
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              <div className="rounded-xl border border-white/10 bg-black/20 p-6">
+                <p className="text-xs uppercase tracking-[0.25em] text-foreground/70 mb-2">
+                  {locale === 'en' ? 'Story' : 'រឿងរ៉ាវ'}
+                </p>
+                <p className="text-sm text-foreground/85 leading-relaxed">
+                  {locale === 'en'
+                    ? 'A love story tested by reputation, family pressure, and the cost of living honestly.'
+                    : 'រឿងស្នេហាដែលត្រូវប្រឈមនឹងកេរ្តិ៍ឈ្មោះ សម្ពាធគ្រួសារ និងតម្លៃនៃការរស់នៅដោយស្មោះត្រង់។'}
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-white/10 bg-black/20 p-6">
+                <p className="text-xs uppercase tracking-[0.25em] text-foreground/70 mb-2">
+                  {locale === 'en' ? 'Themes' : 'ប្រធានបទ'}
+                </p>
+                <p className="text-sm text-foreground/85 leading-relaxed">
+                  {locale === 'en'
+                    ? 'Love, sacrifice, social judgment, and redemption — told with Verdi’s most direct emotional power.'
+                    : 'ស្នេហា ការលះបង់ ការវិនិច្ឆ័យរបស់សង្គម និងការប្រោសលោះ — បង្ហាញដោយអារម្មណ៍ដ៏ខ្លាំងរបស់ Verdi។'}
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-white/10 bg-black/20 p-6">
+                <p className="text-xs uppercase tracking-[0.25em] text-foreground/70 mb-2">
+                  {locale === 'en' ? 'Status' : 'ស្ថានភាព'}
+                </p>
+                <p className="text-sm text-foreground/85 leading-relaxed">
+                  {locale === 'en'
+                    ? 'In development. Join the waitlist to be notified when dates and tickets are announced.'
+                    : 'កំពុងរៀបចំ។ ចុះឈ្មោះរង់ចាំ ដើម្បីទទួលដំណឹងពេលប្រកាសកាលបរិច្ឆេទ និងសំបុត្រ។'}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link href={`/${locale}/waitlist`}>
+                <Button size="lg" className="bg-white text-black hover:bg-white/90" data-testid="button-traviata-waitlist">
+                  <Ticket className="mr-2 h-5 w-5" />
+                  {locale === 'en' ? 'Join the Waitlist' : 'ចុះឈ្មោះរង់ចាំសំបុត្រ'}
+                </Button>
+              </Link>
+              <Link href={`/${locale}/contact`}>
+                <Button variant="outline" size="lg" data-testid="button-traviata-contact">
+                  {locale === 'en' ? 'Ask About Sponsorship / Partnerships' : 'សួរអំពីការឧបត្ថម្ភ / ដៃគូ'}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
