@@ -129,19 +129,19 @@ export default function DonGiovanni() {
       quote: locale === 'en'
         ? 'A truly magical evening. I never imagined experiencing world-class opera in Phnom Penh. This is a milestone for Cambodian arts.'
         : 'ពេលល្ងាចដ៏អស្ចារ្យពិតប្រាកដ។ ខ្ញុំមិនដែលគិតថានឹងទទួលបានបទពិសោធន៍អូប៉េរ៉ាកម្រិតពិភពលោកនៅភ្នំពេញទេ។',
-      author: locale === 'en' ? 'Audience member (post-event feedback)' : 'ទស្សនិកជន (មតិយោបល់បន្ទាប់ព្រឹត្តិការណ៍)',
+      author: locale === 'en' ? 'Audience member' : 'ទស្សនិកជន',
     },
     {
       quote: locale === 'en'
         ? 'The collaboration between international and local artists was seamless. A testament to what cultural exchange can achieve.'
         : 'កិច្ចសហប្រតិបត្តិការរវាងសិល្បករអន្តរជាតិនិងក្នុងស្រុកគឺគ្មានថ្នេរ។ ជាសក្ខីភាពនៃអ្វីដែលការផ្លាស់ប្តូរវប្បធម៌អាចសម្រេចបាន។',
-      author: locale === 'en' ? 'International guest (anonymous)' : 'ភ្ញៀវអន្តរជាតិ (អនាមិក)',
+      author: locale === 'en' ? 'Festival guest' : 'ភ្ញៀវមហោស្រព',
     },
     {
       quote: locale === 'en'
         ? 'Outstanding performances and impeccable production values. Cambodia has arrived on the international opera stage.'
         : 'ការសម្តែងដ៏អស្ចារ្យនិងតម្លៃផលិតកម្មដ៏ល្អឥតខ្ចោះ។ កម្ពុជាបានមកដល់នៅលើឆាកអូប៉េរ៉ាអន្តរជាតិ។',
-      author: locale === 'en' ? 'Attendee (anonymous)' : 'អ្នកចូលរួម (អនាមិក)',
+      author: locale === 'en' ? 'Attendee' : 'អ្នកចូលរួម',
     },
   ];
 
@@ -297,11 +297,8 @@ export default function DonGiovanni() {
               {locale === 'en' ? 'Audience Reactions' : 'ប្រតិកម្មទស្សនិកជន'}
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground">
-              {locale === 'en' ? 'Audience Feedback' : 'មតិយោបល់ទស្សនិកជន'}
+              {locale === 'en' ? 'Audience Reactions' : 'ប្រតិកម្មទស្សនិកជន'}
             </h2>
-            <p className="text-muted-foreground text-sm max-w-2xl mx-auto mt-3">
-              {locale === 'en' ? 'Selections from anonymised audience feedback.' : 'ជម្រើសពីមតិយោបល់ទស្សនិកជន (អនាមិក)។'}
-            </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -314,7 +311,6 @@ export default function DonGiovanni() {
                   <Quote className="h-8 w-8 text-gold/40" />
                 </div>
                 <p className="text-foreground italic leading-relaxed mb-4">"{item.quote}"</p>
-                <p className="text-muted-foreground text-sm font-medium">— {item.author}</p>
               </div>
             ))}
           </div>
