@@ -60,7 +60,7 @@ export default function Festival() {
           <Link href={`/${locale}/waitlist`}>
             <Button size="lg" data-testid="button-book-now">
               <Ticket className="mr-2 h-5 w-5" />
-              {locale === 'en' ? 'Join the Waitlist' : 'កក់ឥឡូវនេះ'}
+              {locale === 'en' ? 'Join the Waitlist' : 'ចុះឈ្មោះរង់ចាំសំបុត្រ'}
             </Button>
           </Link>
         </div>
@@ -288,17 +288,17 @@ export default function Festival() {
             <div className="group relative overflow-hidden rounded-lg bg-card border border-border/50 p-8 text-center hover-elevate transition-all duration-300">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0" />
               <Sparkles className="h-8 w-8 text-primary mx-auto mb-4" />
-              <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-2">La Traviata</h3>
+              <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-2">La Bohème — The Story</h3>
               <p className="text-primary text-sm uppercase tracking-wider mb-4">
-                {locale === 'en' ? 'Season 2027' : 'រដូវកាល ២០២៧'}
+                {locale === 'en' ? 'In Focus' : 'ចំណុចសំខាន់'}
               </p>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 {locale === 'en' 
-                  ? "Verdi's timeless tragedy of love and redemption - our third season production"
-                  : "រឿងសោកនាដកម្មអស់កល្បជានិច្ចរបស់ Verdi អំពីសេចក្តីស្រឡាញ់និងការប្រោសលោះ"}
+                  ? "In bohemian Paris, four young artists chase beauty, love, and meaning — until reality arrives at the door."
+                  : "នៅប៉ារីសបែប bohemian សិល្បករវ័យក្មេងបួននាក់ស្វែងរកស្នេហា និងសោភ័ណភាព ខណៈជីវិតពិតចាប់ផ្តើមគោះទ្វារ។"}
               </p>
               <p className="text-foreground/60 text-sm font-medium">
-                {locale === 'en' ? 'December 2027' : 'ធ្នូ ២០២៧'}
+                {locale === 'en' ? 'Season 2026' : 'រដូវកាល ២០២៦'}
               </p>
             </div>
           </div>
@@ -319,6 +319,24 @@ export default function Festival() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
+        </div>
+      </section>
+
+      <section className="relative bg-background py-16 md:py-24" data-testid="section-looking-ahead">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <p className="text-primary/80 tracking-[0.3em] text-xs uppercase mb-4">
+              {locale === 'en' ? 'Looking Ahead' : 'មើលទៅអនាគត'}
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
+              La Traviata
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+              {locale === 'en'
+                ? "Verdi’s iconic story of love, sacrifice, and society is in development as a future production of the Phnom Penh International Opera Festival."
+                : "រឿងដ៏ល្បីរបស់ Verdi អំពីសេចក្តីស្រឡាញ់ ការលះបង់ និងសង្គម កំពុងស្ថិតក្នុងការរៀបចំសម្រាប់ការផលិតនៅអនាគតរបស់ Phnom Penh International Opera Festival។"}
+            </p>
+          </div>
         </div>
       </section>
     </div>
