@@ -1,7 +1,10 @@
 {
   "routes": [
+    { "handle": "filesystem" },
+
     { "src": "/api/waitlist$", "dest": "/vercel/api/waitlist.ts" },
     { "src": "/api/waitlist/export$", "dest": "/vercel/api/waitlist/export.ts" },
+
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
