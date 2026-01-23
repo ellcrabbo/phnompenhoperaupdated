@@ -8,7 +8,7 @@ import _3589C4F6_AF3E_450C_BEBC_2083A8964326_1_201_a from "@assets/3589C4F6-AF3E
 import EB1D7DA6_B44D_4390_80BD_8EC81420E53F_1_201_a from "@assets/EB1D7DA6-B44D-4390-80BD-8EC81420E53F_1_201_a.jpeg";
 
 import entertainment from "@assets/entertainment.jpg";
-import IMG_3995 from "@assets/IMG_3995.jpg";
+import La_Boheme from "@assets/La_Boheme.jpg";
 
 const IMAGES = {
   nabaTheatre: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/3a21c430-de2d-4389-afb4-a56c972a863f/NABA+Theatre+2.jpg',
@@ -98,7 +98,7 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-black/20">
                 <img
-                  src={IMG_3995}
+                  src={La_Boheme}
                   alt={locale === 'en' ? 'La Bohème — Season 2026' : 'La Bohème — រដូវកាល ២០២៦'}
                   className="h-full w-full object-cover"
                   loading="lazy"
