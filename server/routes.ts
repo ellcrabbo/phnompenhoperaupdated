@@ -61,6 +61,22 @@ export async function registerRoutes(app: Express): Promise<void> {
     return res.status(200).json({ ok: true });
   });
 
+  app.get("/api/waitlist", async (req, res) => {
+    if (!process.env.DATABASE_URL) {
+      return res.status(200).json({ message: "Waitlist is active but not persisting data" });
+    }
+
+    await ensureWaitlistTable();
+    const { rows } = await pgPool.query(
+      "SELECT COUNT(*) as count FROM waitlist;",
+    );
+
+    return res.status(200).json({ 
+      message: "Waitlist is active",
+      count: parseInt(rows[0].count, 10)
+    });
+  });
+
   app.get("/api/waitlist/export", async (req, res) => {
     const token = req.header("x-admin-token") || "";
     const expected = process.env.WAITLIST_ADMIN_TOKEN || "";

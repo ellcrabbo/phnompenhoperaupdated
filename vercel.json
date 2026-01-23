@@ -1,8 +1,8 @@
 {
   "rewrites": [
-    {
-      "source": "/((?!api/).*)",
-      "destination": "/index.html"
-    }
+    { "source": "/api/waitlist", "destination": "/vercel/api/waitlist.ts" },
+    { "source": "/api/waitlist/export", "destination": "/vercel/api/waitlist/export.ts" },
+
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

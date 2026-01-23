@@ -59,6 +59,7 @@ export default function DonGiovanni() {
     { 
       role: locale === 'en' ? 'Director' : 'នាយក', 
       name: 'Vincenzo Grisostomi Travaglini',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/9c02e134-e82c-4c89-a4ce-14dd3a9fbc9d/cimg2531.jpg',
       description: locale === 'en' 
         ? 'A renowned Italian opera director, has captivated audiences world wide by bringing classical masterpieces to new horizons. His collaborative efforts have graced Phnom Penh with the acclaimed production of Madama Butterfly in 2023. Excitingly, Vincenzo is set to lead Don Giovanni in 2025, La Bohème in 2026 to commemorate the 20th Francophonie Summit, and the timeless La Traviata in 2027.'
         : 'នាយកអូប៉េរ៉ាអ៊ីតាលីល្បីល្បាញ បានទាក់ទាញទស្សនិកជនទូទាំងពិភពលោក។',
@@ -67,6 +68,7 @@ export default function DonGiovanni() {
     { 
       role: locale === 'en' ? 'Co-Director' : 'សហនាយក', 
       name: 'HH Prince Sisowath Ravivaddhana Monipong',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/0e5f6787-154c-471a-bf5a-9e327a9e0aa1/ce10918f-5287-40b6-90da-85f510ddb2f2.jpg',
       description: locale === 'en'
         ? 'Also known as Prince Ravi or the "Italian Prince", played a significant role in the Cambodian premiere of Madama Butterfly. It was a continuation of his long-standing collaboration with Vincenzo, which began in 2010 and has included various lyric productions in Europe and Asia. His participation in this production not only added a unique Cambodian perspective but also helped to create a harmonious blend of cultures.'
         : 'ហៅផងដែរថាព្រះអង្គម្ចាស់រ៉ាវី មានតួនាទីសំខាន់ក្នុងការសម្តែងលើកដំបូងនៅកម្ពុជា។',
@@ -75,6 +77,7 @@ export default function DonGiovanni() {
     { 
       role: locale === 'en' ? 'Artistic and Casting Director' : 'នាយកសិល្បៈ និងជ្រើសរើសតួ', 
       name: 'Ai Iwasaki',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/00771b45-14da-4f7e-98f7-82df0fb04971/photo_2025-11-22%2B01.32.53.jpeg',
       description: locale === 'en'
         ? 'Ai is a prominent figure in the opera world, known for her contributions as both an artist and a leader. In 2018, she founded the Cambodia Opera Project, serving as Executive Producer and Artistic Director. She\'s played a central role in the development of Cambodia\'s operatic scene, performing important roles in Cavalleria Rusticana (2018), Pagliacci (2019), and Madama Butterfly (2023), while also overseeing the productions\' artistic direction. In addition, she has contributed to the education of young artists as a voice instructor at the Royal University of Fine Arts in Phnom Penh.'
         : 'Ai គឺជាតួអង្គសំខាន់ក្នុងពិភពអូប៉េរ៉ា ជាស្ថាបនិកគម្រោងអូប៉េរ៉ាកម្ពុជាក្នុងឆ្នាំ ២០១៨។'
@@ -82,6 +85,7 @@ export default function DonGiovanni() {
     { 
       role: locale === 'en' ? 'Conductor' : 'អ្នកដឹកនាំវង់ភ្លេង', 
       name: 'Jun Iisaka',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/845b3c2b-ac42-491e-8496-815afe4f8a85/Screenshot%2B2025-11-22%2Bat%2B07.38.27.png',
       description: locale === 'en'
         ? 'Jun is a distinguished Japanese opera conductor, repetiteur, and producer with extensive experience at the New National Theatre Tokyo for over 20 years. He has contributed to over 100 productions! Internationally, he has expanded his activities to Asia, notably serving as Music Director and Conductor for Cambodia\'s first full-scale opera productions: Cavalleria Rusticana (2018) and Pagliacci (2019), and as Japan Musical Director for Madama Butterfly (2023). In addition, he actively mentors young musicians and fosters cross-cultural collaboration in opera production.'
         : 'Jun គឺជាអ្នកដឹកនាំអូប៉េរ៉ាជប៉ុនល្បីល្បាញ មានបទពិសោធន៍ជាង ២០ ឆ្នាំ។'
@@ -89,15 +93,60 @@ export default function DonGiovanni() {
   ];
 
   const principalCast = [
-    { role: 'Don Giovanni', name: 'Ciro Giordano Orsini', detail: locale === 'en' ? 'Baritone - Italian' : 'បារីតុន - អ៊ីតាលី' },
-    { role: 'Donna Anna', name: 'Maria Tomassi', detail: locale === 'en' ? 'Soprano - Italian' : 'សូប្រាណូ - អ៊ីតាលី' },
-    { role: 'Don Ottavio', name: 'Enrico Guerra', detail: locale === 'en' ? 'Tenor - Italian' : 'តេណ័រ - អ៊ីតាលី' },
-    { role: 'Leporello', name: 'Hideya Masuhara', detail: locale === 'en' ? 'Bass - Japanese' : 'បាស - ជប៉ុន' },
-    { role: 'Donna Elvira', name: 'Yasko Fujii', detail: locale === 'en' ? 'Soprano - Japanese' : 'សូប្រាណូ - ជប៉ុន' },
-    { role: 'Il Commendatore', name: 'Tetsuro Sato', detail: locale === 'en' ? 'Bass - Japanese' : 'បាស - ជប៉ុន' },
-    { role: 'Zerlina', name: 'Ai Iwasaki', detail: locale === 'en' ? 'Soprano - Japanese' : 'សូប្រាណូ - ជប៉ុន' },
-    { role: 'Masetto', name: 'Genta Fujioka', detail: locale === 'en' ? 'Bass - Japanese' : 'បាស - ជប៉ុន' },
-    { role: 'Statue of the Commendatore', name: 'Olivier Michon', detail: locale === 'en' ? 'Bass - French' : 'បាស - បារាំង' },
+    {
+      role: 'Don Giovanni',
+      name: 'Ciro Giordano Orsini',
+      detail: locale === 'en' ? 'Baritone - Italian' : 'បារីតុន - អ៊ីតាលី',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/bd6c937d-8526-4455-a180-8130c60e980a/Enrico_Terrone-removebg-preview.png',
+    },
+    {
+      role: 'Donna Anna',
+      name: 'Maria Tomassi',
+      detail: locale === 'en' ? 'Soprano - Italian' : 'សូប្រាណូ - អ៊ីតាលី',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/a7c619cc-e6ef-43ae-a5f3-d9c1ea059433/Untitled%2Bdesign%2B%283%29.png',
+    },
+    {
+      role: 'Don Ottavio',
+      name: 'Enrico Guerra',
+      detail: locale === 'en' ? 'Tenor - Italian' : 'តេណ័រ - អ៊ីតាលី',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/9455fe53-9406-4c5b-9f13-d8f99377f5e0/EnricoTerrone_Guerra-removebg-preview.png',
+    },
+    {
+      role: 'Leporello',
+      name: 'Hideya Masuhara',
+      detail: locale === 'en' ? 'Bass - Japanese' : 'បាស - ជប៉ុន',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/29c64698-d108-4104-8099-09ba8b8c7e56/Hideya_Masuhara-removebg-preview.png',
+    },
+    {
+      role: 'Donna Elvira',
+      name: 'Yasko Fujii',
+      detail: locale === 'en' ? 'Soprano - Japanese' : 'សូប្រាណូ - ជប៉ុន',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/5139719a-8a65-4f9d-8cd9-0ee9618fd1c3/Yasko_Fuji-removebg-preview.png',
+    },
+    {
+      role: 'Il Commendatore',
+      name: 'Tetsuro Sato',
+      detail: locale === 'en' ? 'Bass - Japanese' : 'បាស - ជប៉ុន',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/1f0a4ded-981a-4d3c-906e-863c727d3f7a/Picture2-removebg-preview%2B%284%29.png',
+    },
+    {
+      role: 'Zerlina',
+      name: 'Ai Iwasaki',
+      detail: locale === 'en' ? 'Soprano - Japanese' : 'សូប្រាណូ - ជប៉ុន',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/afb59d07-cf11-472c-b26d-8a3f247ebf5e/Ai_Iwasaki-removebg-preview.png',
+    },
+    {
+      role: 'Masetto',
+      name: 'Genta Fujioka',
+      detail: locale === 'en' ? 'Bass - Japanese' : 'បាស - ជប៉ុន',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/0343ea82-7019-49b1-b869-16b46bb5250d/Genta_Fujioka-removebg-preview.png',
+    },
+    {
+      role: 'Statue of the Commendatore',
+      name: 'Olivier Michon',
+      detail: locale === 'en' ? 'Bass - French' : 'បាស - បារាំង',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/0fbf78f8-fc73-4c47-aadc-0f8dcaacc22a/WhatsApp_Image_2025-09-30_at_19.11.57_a105bd93-removebg-preview.png',
+    },
   ];
 
   const pressQuotes = [
@@ -346,7 +395,16 @@ export default function DonGiovanni() {
                     >
                       <div className="flex items-center gap-4">
                         <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <Users className="h-5 w-5 text-primary" />
+                          {member.imageUrl ? (
+                            <img
+                              src={member.imageUrl}
+                              alt={member.name}
+                              className="h-full w-full rounded-full object-cover"
+                              loading="lazy"
+                            />
+                          ) : (
+                            <Users className="h-5 w-5 text-primary" />
+                          )}
                         </div>
                         <div>
                           <p className="font-medium text-foreground">{member.name}</p>
@@ -392,7 +450,16 @@ export default function DonGiovanni() {
                     className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border/50"
                   >
                     <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Users className="h-5 w-5 text-primary" />
+                      {member.imageUrl ? (
+                        <img
+                          src={member.imageUrl}
+                          alt={member.name}
+                          className="h-full w-full rounded-full object-cover"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <Users className="h-5 w-5 text-primary" />
+                      )}
                     </div>
                     <div>
                       <p className="font-medium text-foreground">{member.name}</p>
