@@ -1,10 +1,8 @@
 {
-  "routes": [
-    { "handle": "filesystem" },
+  "rewrites": [
+    { "source": "/api/waitlist", "destination": "/vercel/api/waitlist.ts" },
+    { "source": "/api/waitlist/export", "destination": "/vercel/api/waitlist/export.ts" },
 
-    { "src": "/api/waitlist$", "dest": "/vercel/api/waitlist.ts" },
-    { "src": "/api/waitlist/export$", "dest": "/vercel/api/waitlist/export.ts" },
-
-    { "src": "/((?!api/|assets/|favicon\\.ico$|apple-touch-icon\\.png$|site\\.webmanifest$|robots\\.txt$|sitemap\\.xml$).*)", "dest": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
