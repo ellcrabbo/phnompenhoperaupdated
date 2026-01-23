@@ -7,6 +7,7 @@ import _3589C4F6_AF3E_450C_BEBC_2083A8964326_1_201_a from "@assets/3589C4F6-AF3E
 
 import EB1D7DA6_B44D_4390_80BD_8EC81420E53F_1_201_a from "@assets/EB1D7DA6-B44D-4390-80BD-8EC81420E53F_1_201_a.jpeg";
 
+import NABAimage from "@assets/img.3995.jpg";
 import entertainment from "@assets/entertainment.jpg";
 
 const IMAGES = {
@@ -61,6 +62,54 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      <section className="relative bg-background py-16 md:py-24" data-testid="section-la-boheme">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p className="text-primary/80 tracking-[0.3em] text-xs uppercase mb-4">
+                {locale === 'en' ? 'Season 2026 • Next Production' : 'រដូវកាល ២០២៦ • ការផលិតបន្ទាប់'}
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-5">
+                La Bohème
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                {locale === 'en'
+                  ? 'Set in bohemian Paris, four young artists chase beauty, love, and meaning — until reality arrives at the door. Puccini’s most beloved opera captures the intensity of living fully, even when time is short.'
+                  : 'នៅប៉ារីសបែប bohemian សិល្បករវ័យក្មេងបួននាក់ស្វែងរកសោភ័ណភាព ស្នេហា និងអត្ថន័យ ខណៈជីវិតពិតចាប់ផ្តើមគោះទ្វារ។ La Bohème របស់ Puccini បង្ហាញអារម្មណ៍នៃការរស់នៅពេញលេញ ទោះពេលវេលាមានកំណត់ក៏ដោយ។'}
+              </p>
+
+              <ul className="space-y-2 text-sm text-foreground/80 mb-8">
+                <li>• {locale === 'en' ? 'A timeless love story with unforgettable music' : 'រឿងស្នេហាអស់កល្បជាមួយតន្ត្រីមិនអាចបំភ្លេចបាន'}</li>
+                <li>• {locale === 'en' ? 'A centrepiece of our 2026 artistic vision' : 'ជាស្នូលនៃទស្សនវិស័យសិល្បៈរបស់យើងសម្រាប់ឆ្នាំ ២០២៦'}</li>
+                <li>• {locale === 'en' ? 'Join the waitlist for dates and ticket release' : 'ចុះឈ្មោះរង់ចាំសម្រាប់កាលបរិច្ឆេទ និងការចេញលក់សំបុត្រ'}</li>
+              </ul>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href={`/${locale}/waitlist`}>
+                  <Button size="lg" data-testid="button-la-boheme-waitlist">
+                    <Ticket className="mr-2 h-5 w-5" />
+                    {locale === 'en' ? 'Join the Waitlist' : 'ចុះឈ្មោះរង់ចាំសំបុត្រ'}
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+                <img
+                  src={NABAimage}
+                  alt={locale === 'en' ? 'Festival imagery' : 'រូបភាពមហោស្រព'}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/10" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section
         className="relative bg-background py-16 md:py-24"
         data-testid="section-don-giovanni"
