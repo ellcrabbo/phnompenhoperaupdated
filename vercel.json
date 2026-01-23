@@ -1,10 +1,4 @@
 {
-  "functions": {
-    "vercel/api/**/*.ts": {
-      "runtime": "nodejs20.x"
-    }
-  },
-
   "routes": [
     { "src": "/api/waitlist$", "dest": "/vercel/api/waitlist.ts" },
     { "src": "/api/waitlist/export$", "dest": "/vercel/api/waitlist/export.ts" },
