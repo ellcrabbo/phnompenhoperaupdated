@@ -7,7 +7,7 @@ import _3589C4F6_AF3E_450C_BEBC_2083A8964326_1_201_a from "@assets/3589C4F6-AF3E
 
 import EB1D7DA6_B44D_4390_80BD_8EC81420E53F_1_201_a from "@assets/EB1D7DA6-B44D-4390-80BD-8EC81420E53F_1_201_a.jpeg";
 
-import NABAimage from "@assets/img.3995.jpg";
+import NABAimage from "@assets/img_3995.jpg";
 import entertainment from "@assets/entertainment.jpg";
 
 const IMAGES = {
