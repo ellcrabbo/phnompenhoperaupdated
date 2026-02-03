@@ -24,9 +24,33 @@ import partnerLogo41 from '@assets/partner_logos/logo-041.jpg';
 import partnerLogo47 from '@assets/partner_logos/logo-047.jpg';
 import partnerLogo52 from '@assets/partner_logos/logo-052.jpg';
 
+const NABA_THEATRE_BASE =
+  'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/3a21c430-de2d-4389-afb4-a56c972a863f/NABA+Theatre+2.jpg';
+const HERO_IMAGE = {
+  src: `${NABA_THEATRE_BASE}?format=1600w`,
+  srcSet: [
+    `${NABA_THEATRE_BASE}?format=800w 800w`,
+    `${NABA_THEATRE_BASE}?format=1200w 1200w`,
+    `${NABA_THEATRE_BASE}?format=1600w 1600w`,
+    `${NABA_THEATRE_BASE}?format=2000w 2000w`,
+  ].join(', '),
+  sizes: '100vw',
+};
+const DON_GIOVANNI_POSTER_BASE =
+  'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/10a5277d-a04d-46a7-9eb7-99f7bf83454d/2%2BDON%2BGIOVANNI%2Bposter%2BL%2Bmaster.%2B_b%2Bpsd.jpg';
+const DON_GIOVANNI_POSTER = {
+  src: `${DON_GIOVANNI_POSTER_BASE}?format=1600w`,
+  srcSet: [
+    `${DON_GIOVANNI_POSTER_BASE}?format=800w 800w`,
+    `${DON_GIOVANNI_POSTER_BASE}?format=1200w 1200w`,
+    `${DON_GIOVANNI_POSTER_BASE}?format=1600w 1600w`,
+    `${DON_GIOVANNI_POSTER_BASE}?format=2000w 2000w`,
+  ].join(', '),
+  sizes: '100vw',
+};
+
 const IMAGES = {
-  nabaTheatre: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/3a21c430-de2d-4389-afb4-a56c972a863f/NABA+Theatre+2.jpg',
-  donGiovanniPoster: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/10a5277d-a04d-46a7-9eb7-99f7bf83454d/2%2BDON%2BGIOVANNI%2Bposter%2BL%2Bmaster.%2B_b%2Bpsd.jpg',
+  nabaTheatre: `${NABA_THEATRE_BASE}?format=1200w`,
   donGiovanniTitle: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/0dbc9424-a4d4-47af-ab7f-6222b738e363/Title+CMYK.png',
   theaterSeats: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1920&q=80',
   orchestra: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=800&q=80',
@@ -200,9 +224,16 @@ export default function DonGiovanni() {
         className="relative min-h-[60vh] flex items-center justify-center"
         data-testid="section-hero"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('${IMAGES.nabaTheatre}')` }}
+        <img
+          src={HERO_IMAGE.src}
+          srcSet={HERO_IMAGE.srcSet}
+          sizes={HERO_IMAGE.sizes}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
@@ -216,6 +247,8 @@ export default function DonGiovanni() {
             src={IMAGES.donGiovanniTitle} 
             alt="Don Giovanni"
             className="max-w-[300px] md:max-w-[400px] mx-auto mb-6"
+            loading="lazy"
+            decoding="async"
           />
           
           <p className="font-serif italic text-lg md:text-xl text-foreground">
@@ -290,10 +323,17 @@ export default function DonGiovanni() {
             </div>
             
             <div className="relative">
-              <div
-                className="aspect-[3/4] rounded-lg bg-cover bg-center"
-                style={{ backgroundImage: `url('${IMAGES.donGiovanniPoster}')` }}
-              />
+              <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                <img
+                  src={DON_GIOVANNI_POSTER.src}
+                  srcSet={DON_GIOVANNI_POSTER.srcSet}
+                  sizes="(min-width: 1024px) 35vw, 90vw"
+                  alt={locale === 'en' ? 'Don Giovanni poster' : 'ផ្ទាំងផ្សព្វផ្សាយ Don Giovanni'}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-background/40 via-transparent to-transparent" />
             </div>
           </div>
@@ -401,6 +441,7 @@ export default function DonGiovanni() {
                               alt={member.name}
                               className="h-full w-full rounded-full object-cover"
                               loading="lazy"
+                              decoding="async"
                             />
                           ) : (
                             <Users className="h-5 w-5 text-primary" />
@@ -456,6 +497,7 @@ export default function DonGiovanni() {
                           alt={member.name}
                           className="h-full w-full rounded-full object-cover"
                           loading="lazy"
+                          decoding="async"
                         />
                       ) : (
                         <Users className="h-5 w-5 text-primary" />
@@ -485,26 +527,51 @@ export default function DonGiovanni() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            <div
-              className="aspect-[4/5] bg-cover bg-center rounded-lg col-span-2 row-span-2"
-              style={{ backgroundImage: `url('${IMAGES.nabaTheatre}')` }}
-            />
-            <div
-              className="aspect-square bg-cover bg-center rounded-lg"
-              style={{ backgroundImage: `url('${IMAGES.orchestra}')` }}
-            />
-            <div
-              className="aspect-square bg-cover bg-center rounded-lg"
-              style={{ backgroundImage: `url('${IMAGES.performance1}')` }}
-            />
-            <div
-              className="aspect-square bg-cover bg-center rounded-lg"
-              style={{ backgroundImage: `url('${IMAGES.performance2}')` }}
-            />
-            <div
-              className="aspect-square bg-cover bg-center rounded-lg"
-              style={{ backgroundImage: `url('${IMAGES.theaterSeats}')` }}
-            />
+            <div className="col-span-2 row-span-2 aspect-[4/5] overflow-hidden rounded-lg">
+              <img
+                src={IMAGES.nabaTheatre}
+                alt={locale === 'en' ? 'NABA Theatre' : 'មហោស្រព NABA'}
+                className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-lg">
+              <img
+                src={IMAGES.orchestra}
+                alt={locale === 'en' ? 'Orchestra performance' : 'ការសម្តែងវង់ភ្លេង'}
+                className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-lg">
+              <img
+                src={IMAGES.performance1}
+                alt={locale === 'en' ? 'Opera performance' : 'ការសម្តែងអូប៉េរ៉ា'}
+                className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-lg">
+              <img
+                src={IMAGES.performance2}
+                alt={locale === 'en' ? 'Opera performance' : 'ការសម្តែងអូប៉េរ៉ា'}
+                className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-lg">
+              <img
+                src={IMAGES.theaterSeats}
+                alt={locale === 'en' ? 'Theatre seats' : 'កៅអីមហោស្រព'}
+                className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -532,6 +599,8 @@ export default function DonGiovanni() {
                   src={logo}
                   alt={`Partner ${index + 1}`}
                   className="h-full w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}

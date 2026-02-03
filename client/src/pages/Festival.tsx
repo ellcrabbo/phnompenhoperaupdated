@@ -4,9 +4,32 @@ import { Button } from '@/components/ui/button';
 import { useLocale } from '@/lib/locale-context';
 import backstageImage from '@assets/IMG_8590.jpg';
 
+const NABA_THEATRE_BASE =
+  'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/3a21c430-de2d-4389-afb4-a56c972a863f/NABA+Theatre+2.jpg';
+const HERO_IMAGE = {
+  src: `${NABA_THEATRE_BASE}?format=1600w`,
+  srcSet: [
+    `${NABA_THEATRE_BASE}?format=800w 800w`,
+    `${NABA_THEATRE_BASE}?format=1200w 1200w`,
+    `${NABA_THEATRE_BASE}?format=1600w 1600w`,
+    `${NABA_THEATRE_BASE}?format=2000w 2000w`,
+  ].join(', '),
+  sizes: '100vw',
+};
+const DON_GIOVANNI_POSTER_BASE =
+  'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/10a5277d-a04d-46a7-9eb7-99f7bf83454d/2%2BDON%2BGIOVANNI%2Bposter%2BL%2Bmaster.%2B_b%2Bpsd.jpg';
+const DON_GIOVANNI_POSTER = {
+  src: `${DON_GIOVANNI_POSTER_BASE}?format=1600w`,
+  srcSet: [
+    `${DON_GIOVANNI_POSTER_BASE}?format=800w 800w`,
+    `${DON_GIOVANNI_POSTER_BASE}?format=1200w 1200w`,
+    `${DON_GIOVANNI_POSTER_BASE}?format=1600w 1600w`,
+    `${DON_GIOVANNI_POSTER_BASE}?format=2000w 2000w`,
+  ].join(', '),
+  sizes: '100vw',
+};
+
 const IMAGES = {
-  nabaTheatre: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/3a21c430-de2d-4389-afb4-a56c972a863f/NABA+Theatre+2.jpg',
-  donGiovanniPoster: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/10a5277d-a04d-46a7-9eb7-99f7bf83454d/2%2BDON%2BGIOVANNI%2Bposter%2BL%2Bmaster.%2B_b%2Bpsd.jpg',
   donGiovanniTitle: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/0dbc9424-a4d4-47af-ab7f-6222b738e363/Title+CMYK.png',
   theaterSeats: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1920&q=80',
   orchestra: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1920&q=80',
@@ -32,11 +55,16 @@ export default function Festival() {
         className="relative min-h-[85vh] flex items-center justify-center"
         data-testid="section-hero"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('${IMAGES.nabaTheatre}')`,
-          }}
+        <img
+          src={HERO_IMAGE.src}
+          srcSet={HERO_IMAGE.srcSet}
+          sizes={HERO_IMAGE.sizes}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
@@ -106,10 +134,15 @@ export default function Festival() {
             </div>
             <div className="order-1 lg:order-2">
               <div className="relative">
-                <div
-                  className="aspect-[4/5] rounded-lg bg-cover bg-center"
-                  style={{ backgroundImage: `url('${IMAGES.backstage}')` }}
-                />
+                <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+                  <img
+                    src={IMAGES.backstage}
+                    alt={locale === 'en' ? 'Backstage at the festival' : 'នៅក្រោយឆាកមហោស្រព'}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-background via-background/40 to-transparent" />
               </div>
             </div>
@@ -178,9 +211,15 @@ export default function Festival() {
         className="relative py-16 md:py-24"
         data-testid="section-don-giovanni"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('${IMAGES.donGiovanniPoster}')` }}
+        <img
+          src={DON_GIOVANNI_POSTER.src}
+          srcSet={DON_GIOVANNI_POSTER.srcSet}
+          sizes={DON_GIOVANNI_POSTER.sizes}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-l from-background via-background/80 to-background/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
@@ -195,6 +234,8 @@ export default function Festival() {
               src={IMAGES.donGiovanniTitle} 
               alt="Don Giovanni"
               className="max-w-[280px] md:max-w-[340px] mb-6 ml-auto"
+              loading="lazy"
+              decoding="async"
             />
 
             <div className="flex items-center gap-3 mb-6 justify-end">

@@ -10,8 +10,20 @@ import EB1D7DA6_B44D_4390_80BD_8EC81420E53F_1_201_a from "@assets/EB1D7DA6-B44D-
 import entertainment from "@assets/entertainment.jpg";
 import La_Boheme from "@assets/La_Boheme.jpg";
 
+const NABA_THEATRE_BASE =
+  'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/3a21c430-de2d-4389-afb4-a56c972a863f/NABA+Theatre+2.jpg';
+const HERO_IMAGE = {
+  src: `${NABA_THEATRE_BASE}?format=1600w`,
+  srcSet: [
+    `${NABA_THEATRE_BASE}?format=800w 800w`,
+    `${NABA_THEATRE_BASE}?format=1200w 1200w`,
+    `${NABA_THEATRE_BASE}?format=1600w 1600w`,
+    `${NABA_THEATRE_BASE}?format=2000w 2000w`,
+  ].join(', '),
+  sizes: '100vw',
+};
+
 const IMAGES = {
-  nabaTheatre: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/3a21c430-de2d-4389-afb4-a56c972a863f/NABA+Theatre+2.jpg',
   donGiovanniPoster: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/10a5277d-a04d-46a7-9eb7-99f7bf83454d/2%2BDON%2BGIOVANNI%2Bposter%2BL%2Bmaster.%2B_b%2Bpsd.jpg?format=2500w',
   donGiovanniTitle: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/0dbc9424-a4d4-47af-ab7f-6222b738e363/Title+CMYK.png',
   carbonFootprint: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/f1081f3a-d1ce-4dcf-808c-6933160af528/DON+GIOVANNI+Carbon+foot+print+v4.png',
@@ -30,9 +42,16 @@ export default function Home() {
         className="relative min-h-[85vh] flex items-center justify-center"
         data-testid="section-hero"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('${IMAGES.nabaTheatre}')` }}
+        <img
+          src={HERO_IMAGE.src}
+          srcSet={HERO_IMAGE.srcSet}
+          sizes={HERO_IMAGE.sizes}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
@@ -102,6 +121,7 @@ export default function Home() {
                   alt={locale === 'en' ? 'La Bohème — Season 2026' : 'La Bohème — រដូវកាល ២០២៦'}
                   className="h-full w-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/10" />
@@ -123,6 +143,8 @@ export default function Home() {
               src={IMAGES.donGiovanniTitle} 
               alt="Don Giovanni"
               className="max-w-xs md:max-w-md mx-auto mb-6"
+              loading="lazy"
+              decoding="async"
             />
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               {locale === 'en' 
@@ -137,6 +159,8 @@ export default function Home() {
                 src={entertainment} 
                 alt="NABA Theatre"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="aspect-[4/5] rounded-lg overflow-hidden">
@@ -144,6 +168,8 @@ export default function Home() {
                 src={EB1D7DA6_B44D_4390_80BD_8EC81420E53F_1_201_a} 
                 alt="Don Giovanni Performance"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="aspect-[4/5] rounded-lg overflow-hidden bg-primary/20 flex items-center justify-center">
@@ -185,6 +211,8 @@ export default function Home() {
                 src={IMAGES.carbonFootprint} 
                 alt="Carbon Footprint Initiative"
                 className="max-w-[200px] md:max-w-[280px] mx-auto lg:mx-0"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             
@@ -226,21 +254,29 @@ export default function Home() {
               src={IMAGES.partnerAllDreams} 
               alt="All Dreams Cambodia"
               className="max-h-32 w-auto opacity-90 hover:opacity-100 transition-opacity"
+              loading="lazy"
+              decoding="async"
             />
             <img 
               src={IMAGES.partnerNA} 
               alt="N&A Cambodia"
               className="max-h-32 w-auto opacity-90 hover:opacity-100 transition-opacity"
+              loading="lazy"
+              decoding="async"
             />
             <img 
               src={IMAGES.partnerThird} 
               alt="Partner"
               className="max-h-32 w-auto opacity-90 hover:opacity-100 transition-opacity"
+              loading="lazy"
+              decoding="async"
             />
             <img 
               src={IMAGES.partnerNagaworld} 
               alt="NagaWorld"
               className="max-h-32 w-auto opacity-90 hover:opacity-100 transition-opacity"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

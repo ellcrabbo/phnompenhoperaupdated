@@ -6,8 +6,20 @@ import nabaInterior from '@/assets/IMG_3998.jpg';
 import nabaStage from '@/assets/IMG_3588.jpg';
 
 
+const NABA_THEATRE_BASE =
+  'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/3a21c430-de2d-4389-afb4-a56c972a863f/NABA+Theatre+2.jpg';
+const HERO_IMAGE = {
+  src: `${NABA_THEATRE_BASE}?format=1600w`,
+  srcSet: [
+    `${NABA_THEATRE_BASE}?format=800w 800w`,
+    `${NABA_THEATRE_BASE}?format=1200w 1200w`,
+    `${NABA_THEATRE_BASE}?format=1600w 1600w`,
+    `${NABA_THEATRE_BASE}?format=2000w 2000w`,
+  ].join(', '),
+  sizes: '100vw',
+};
+
 const IMAGES = {
-  nabaExterior: 'https://images.squarespace-cdn.com/content/v1/690c0b0878c83b5be15a45c7/3a21c430-de2d-4389-afb4-a56c972a863f/NABA+Theatre+2.jpg',
   nabaInterior,
   nabaStage,
 };
@@ -31,9 +43,16 @@ export default function NabaTheatre() {
         className="relative min-h-[85vh] flex items-center justify-center"
         data-testid="section-hero"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('${IMAGES.nabaExterior}')` }}
+        <img
+          src={HERO_IMAGE.src}
+          srcSet={HERO_IMAGE.srcSet}
+          sizes={HERO_IMAGE.sizes}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
@@ -92,10 +111,15 @@ export default function NabaTheatre() {
             </div>
             
             <div className="relative">
-              <div
-                className="aspect-[4/3] rounded-lg bg-cover bg-center"
-                style={{ backgroundImage: `url('${IMAGES.nabaInterior}')` }}
-              />
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <img
+                  src={IMAGES.nabaInterior}
+                  alt={locale === 'en' ? 'Inside NABA Theatre' : 'ខាងក្នុងមហោស្រព NABA'}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-background/30 via-transparent to-transparent" />
             </div>
           </div>
@@ -177,10 +201,15 @@ export default function NabaTheatre() {
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div
-                className="aspect-[4/3] rounded-lg bg-cover bg-center"
-                style={{ backgroundImage: `url('${IMAGES.nabaStage}')` }}
-              />
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <img
+                  src={IMAGES.nabaStage}
+                  alt={locale === 'en' ? 'NABA Theatre stage' : 'ឆាកមហោស្រព NABA'}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </div>
             
             <div className="order-1 lg:order-2">
